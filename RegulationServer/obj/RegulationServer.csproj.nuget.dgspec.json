@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/aiorio/repos/Regulation.net/RegulationServer/RegulationServer.csproj": {}
+    "/home/pi/Regulation.net/RegulationServer/RegulationServer.csproj": {}
   },
   "projects": {
-    "/home/aiorio/repos/Regulation.net/RegulationServer/RegulationServer.csproj": {
+    "/home/pi/Regulation.net/RegulationServer/RegulationServer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/aiorio/repos/Regulation.net/RegulationServer/RegulationServer.csproj",
+        "projectUniqueName": "/home/pi/Regulation.net/RegulationServer/RegulationServer.csproj",
         "projectName": "RegulationServer",
-        "projectPath": "/home/aiorio/repos/Regulation.net/RegulationServer/RegulationServer.csproj",
-        "packagesPath": "/home/aiorio/.nuget/packages/",
-        "outputPath": "/home/aiorio/repos/Regulation.net/RegulationServer/obj/",
+        "projectPath": "/home/pi/Regulation.net/RegulationServer/RegulationServer.csproj",
+        "packagesPath": "/home/pi/.nuget/packages/",
+        "outputPath": "/home/pi/Regulation.net/RegulationServer/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/aiorio/.nuget/NuGet/NuGet.Config"
+          "/home/pi/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -32,6 +32,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -56,7 +61,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.105/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/pi/.dotnet/sdk/8.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

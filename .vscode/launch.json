@@ -1,0 +1,31 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": ".NET Core Remote Debug",
+        "type": "coreclr",
+        "request": "launch",
+        "program": "/home/pi/Regulation.net/RegulationServer/bin/Debug/net8.0/RegulationServer.dll",
+        "args": [],
+        "cwd": "${workspaceFolder}",
+        "stopAtEntry": false,
+        "serverReadyAction": {
+          "action": "openExternally",
+          "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
+        },
+        "pipeTransport": {
+          "pipeCwd": "${workspaceFolder}",
+          "pipeProgram": "ssh",
+          "pipeArgs": [
+            "pi@<raspberry_pi_ip>",
+            "-T",
+            "cd ${workspaceFolder}; ./vsdbg/vsdbg --interpreter=vscode"
+          ],
+          "debuggerPath": "/vsdbg/vsdbg"
+        },
+        "sourceFileMap": {
+          "/app": "${workspaceFolder}"
+        }
+      }
+    ]
+  }

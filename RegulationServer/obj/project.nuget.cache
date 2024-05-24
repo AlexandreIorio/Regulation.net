@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "MgETWm3o7TwA/roHEYKWHrr8KKDcnh83JJJPTr9Oyddd9IFg3bKDjq5AstHeSf5m2qY+ONvv7ZOITM+szCCuOA==",
+  "dgSpecHash": "c/TumpmWO1E=",
   "success": true,
-  "projectFilePath": "/home/aiorio/repos/Regulation.net/RegulationServer/RegulationServer.csproj",
+  "projectFilePath": "/home/pi/Regulation.net/RegulationServer/RegulationServer.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
