@@ -6,4 +6,17 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+    <ItemGroup>
+         <ProjectReference Include="../RegulationLib/RegulationLib.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Iot.Device.Bindings" Version="3.1.0" />
+      <PackageReference Include="nanoFramework.Device.OneWire" Version="1.4.14" />
+      <PackageReference Include="nanoFramework.Iot.Device.Ds18b20" Version="1.0.487" />
+      <PackageReference Include="Rinsen.OneWire" Version="0.3.2" />
+      <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+      <PackageReference Include="System.Device.Gpio" Version="3.1.0" />
+    </ItemGroup>
+
 </Project>

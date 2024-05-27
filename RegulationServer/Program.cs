@@ -1,27 +1,54 @@
-var builder = WebApplication.CreateBuilder(args);
+using RegulationLib.Models;
+using RegulationServer.Controllers;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using Microsoft.OpenApi.Models;
 
-// Add services to the container.
-builder.Services.AddControllersWithViews();
+var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddControllers();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "Regulation API", Version = "v1" });
+});
+
+// Configuration de CORS
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAllOrigins",
+        builder => builder.AllowAnyOrigin()
+            .AllowAnyMethod()
+            .AllowAnyHeader());
+});
+
+#region Components
+Pump pump1 = new Pump(1, "Pompe", 12);
+#endregion
+
+#region Controllers
+builder.Services.AddSingleton(Pump.Pumps);
+builder.Services.AddControllers();
+#endregion
+
+TemperatureSensor sensor = new TemperatureSensor(4);
+while (true)
+{
+    sensor.ReadTemperature();
+    Thread.Sleep(1000);
+}
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (!app.Environment.IsDevelopment())
-{
-    app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-    app.UseHsts();
-}
+app.UseCors("AllowAllOrigins");
 
-app.UseHttpsRedirection();
-app.UseStaticFiles();
+app.UseRouting(); // Ajout de UseRouting
 
-app.UseRouting();
+app.MapControllers();
 
-app.UseAuthorization();
+app.UseDeveloperExceptionPage();
+app.UseSwagger();
+app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1"));
 
-app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
 
-app.Run();
+app.Run("http://0.0.0.0:5000");
