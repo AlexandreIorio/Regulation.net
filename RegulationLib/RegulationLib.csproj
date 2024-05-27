@@ -7,10 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore" Version="2.2.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
-    <PackageReference Include="nanoFramework.Device.OneWire" Version="1.4.14" />
-    <PackageReference Include="nanoFramework.Iot.Device.Ds18b20" Version="1.0.487" />
     <PackageReference Include="System.Device.Gpio" Version="3.1.0" />
   </ItemGroup>
 

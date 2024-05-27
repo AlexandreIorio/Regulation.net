@@ -1,0 +1,52 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        // Task to build and copy the server
+        {
+            "label": "RegulationServer",
+            "type": "shell",
+            "command": "",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "dependsOn": [
+                "srv-cpy"
+            ]
+        },
+        {
+            "label": "srv-build",
+            "type": "shell",
+            "command": "dotnet",
+            "args": [
+                "publish",
+                "-c",
+                "Debug",
+                "-r",
+                "linux-arm64",
+                "--self-contained",
+                "true",
+                "${workspaceFolder}/RegulationServer"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "srv-cpy",
+            "type": "shell",
+            "command": "rsync",
+            "args": [
+                "-hvrPt",
+                "${workspaceFolder}/RegulationServer/bin/Debug/", // Local directory to copy
+                "pi@192.168.1.99:~/Regulation.net/RegulationServer/Debug"
+            ],
+            "dependsOn": [
+                "srv-build"
+            ],
+            "problemMatcher": []
+        },
+    ]
+}

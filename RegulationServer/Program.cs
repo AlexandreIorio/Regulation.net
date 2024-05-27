@@ -24,19 +24,16 @@ builder.Services.AddCors(options =>
 
 #region Components
 Pump pump1 = new Pump(1, "Pompe", 12);
+TemperatureSensor sensor1 = new TemperatureSensor(1,"test", "28-00000c96e4f5");
 #endregion
 
 #region Controllers
 builder.Services.AddSingleton(Pump.Pumps);
+builder.Services.AddSingleton(TemperatureSensor.Sensors);
 builder.Services.AddControllers();
 #endregion
 
-TemperatureSensor sensor = new TemperatureSensor(4);
-while (true)
-{
-    sensor.ReadTemperature();
-    Thread.Sleep(1000);
-}
+
 
 var app = builder.Build();
 

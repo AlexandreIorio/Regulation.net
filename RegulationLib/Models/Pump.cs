@@ -14,7 +14,7 @@ public class Pump
     private const int INITIAL_SPEED = 50;
     private int? _currentSpeed;
     private bool _isRunning = false;
-    private PwmChannel _pwmChannel;
+    private PwmChannel? _pwmChannel;
     public int Id { get; init; }
     static public Dictionary<int, Pump> Pumps = new ();
 
@@ -48,15 +48,18 @@ public class Pump
     {
         speed = speed > 100 ? 100 : speed < 0 ? 0 : speed;
         _currentSpeed = speed;
+        if (_pwmChannel is null) throw new NullReferenceException("PWM channel is null");
         _pwmChannel.DutyCycle = speed / 100.0;
     }
     public void Start()
     {
+        if (_pwmChannel is null) throw new NullReferenceException("PWM channel is null");
         _pwmChannel.Start();
         _isRunning = true;
     }
     public void Stop()
     {
+        if (_pwmChannel is null) throw new NullReferenceException("PWM channel is null");
         _pwmChannel.Stop();
         _isRunning = false;
     }
