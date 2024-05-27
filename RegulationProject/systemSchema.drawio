@@ -1,0 +1,22 @@
+<mxfile host="Electron" modified="2024-05-27T13:46:49.090Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.4.8 Chrome/124.0.6367.207 Electron/30.0.6 Safari/537.36" etag="ojPYCxPjcq05t1bOz1dQ" version="24.4.8" type="device">
+  <diagram name="Page-1" id="27XwlvzdkAbfpsEZxYul">
+    <mxGraphModel dx="650" dy="1570" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="AZM7lGx1XDMeqV9eadqO-1" value="" style="shape=mxgraph.pid.vessels.vessel_(dished_ends,_thermal_insulation);html=1;pointerEvents=1;align=center;verticalLabelPosition=bottom;verticalAlign=top;dashed=0;" vertex="1" parent="1">
+          <mxGeometry x="160" y="-320" width="52" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="AZM7lGx1XDMeqV9eadqO-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;shape=link;exitX=0.003;exitY=0.249;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1.007;entryY=0.805;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="AZM7lGx1XDMeqV9eadqO-2" target="AZM7lGx1XDMeqV9eadqO-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="AZM7lGx1XDMeqV9eadqO-2" value="" style="shape=mxgraph.pid.vessels.vessel_(dished_ends,_thermal_insulation);html=1;pointerEvents=1;align=center;verticalLabelPosition=bottom;verticalAlign=top;dashed=0;" vertex="1" parent="1">
+          <mxGeometry x="250" y="-320" width="52" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="AZM7lGx1XDMeqV9eadqO-4" value="" style="shape=mxgraph.pid.pumps_-_iso.pump_(progressive_cavity);html=1;pointerEvents=1;align=center;verticalLabelPosition=bottom;verticalAlign=top;dashed=0;" vertex="1" parent="1">
+          <mxGeometry x="330" y="-200" width="40" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
