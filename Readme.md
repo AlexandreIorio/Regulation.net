@@ -85,4 +85,4 @@ http://0.0.0.0:5000/swagger
 ```
 
 ## Debugging
-The .vscode folder with launch.json and tasks.json is ready for debugging if needed.
+The .vscode folder with `launch.json` and `tasks.json` is ready for debugging if needed.
